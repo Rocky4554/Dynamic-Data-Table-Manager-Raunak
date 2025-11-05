@@ -13,7 +13,7 @@ import {
   Chip,
 } from '@mui/material'
 import { Settings, Close, DragIndicator } from '@mui/icons-material'
-import { ManageColumnsModalProps, Column } from '@/types'
+import { ManageColumnsModalProps, Column } from '../types/index'
 
 const ManageColumnsModal: React.FC<ManageColumnsModalProps> = ({
   open,

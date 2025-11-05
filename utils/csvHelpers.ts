@@ -1,5 +1,5 @@
 import Papa from 'papaparse'
-import { TableRow, CSVValidationResult } from '@/types'
+import { TableRow, CSVValidationResult } from '../types/index'
 
 export const validateCSVData = (
   data: any[],

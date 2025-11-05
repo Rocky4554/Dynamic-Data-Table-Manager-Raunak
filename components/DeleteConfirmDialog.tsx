@@ -8,7 +8,7 @@ import {
   Typography,
 } from '@mui/material'
 import { Delete, Close, Error as ErrorIcon } from '@mui/icons-material'
-import { DeleteConfirmDialogProps } from '@/types'
+import { DeleteConfirmDialogProps } from '../types/index'
 
 const DeleteConfirmDialog = ({
   open,

@@ -9,7 +9,7 @@ import {
   addColumn,
   deleteRow 
 } from '../store/tableSlice'
-import { DeleteDialogState, Column, TableRow } from '@/types'
+import { DeleteDialogState, Column, TableRow } from '../types/index'
 
 export const useTableActions = (sortConfig: any) => {
   const dispatch = useAppDispatch()

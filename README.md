@@ -66,6 +66,8 @@ The application is built to simulate real-world dashboard functionality, emphasi
 
 ## Folder Structure
 
+```
+
 project-root/
 │
 ├── app/
@@ -104,10 +106,7 @@ project-root/
 ├── package.json
 └── README.md
 
-yaml
-Copy code
-
----
+```
 
 ## How to Run the Project Locally
 
@@ -119,27 +118,26 @@ Ensure you have the following installed:
 ### Steps
 
 1. **Clone the repository**
-   ```bash
+    ```bash
    git clone https://github.com/yourusername/dynamic-data-table-manager.git
    cd dynamic-data-table-manager
-Install dependencies
 
-bash
-Copy code
-npm install
-Run the development server
+2. **Insatll Dependencies**
 
-bash
-Copy code
-npm run dev
-Open the application
-Visit: http://localhost:3000
+    ```bash
+    npm install
+    Run the development server
 
-Build for Production
-bash
-Copy code
-npm run build
-npm run start
+    npm run dev
+    Open the application
+    Visit: http://localhost:3000
+
+3. **Built for Production**
+
+    ```bash
+    npm run build
+    npm run start
+
 ## 📸 Screenshots
 
 ### 1. Mian Table
@@ -157,22 +155,22 @@ npm run start
 ### 5. Row Edit
 ![Particulat row edit](./public/screesnShots/save-all.png)
 
-Evaluation Notes
+
 This project demonstrates:
 
-Component-based design with separation of concerns
+Component-based design with separation of concerns.
 
-Proper use of Redux Toolkit for managing complex UI state
+Proper use of Redux Toolkit for managing complex UI state.
 
-Integration of MUI for theming and consistent design
+Integration of MUI for theming and consistent design.
 
-CSV import/export handling using browser APIs
+CSV import/export handling using browser APIs.
 
-TypeScript for type safety and maintainability
+TypeScript for type safety and maintainability.
 
-Fully responsive and accessible design
+Fully responsive and accessible design.
 
 Made by
 Raunak Kumar
-GitHub: https://github.com/Rocky4554
-LinkedIn: https://www.linkedin.com/in/raunak-kumar54/
+- GitHub: https://github.com/Rocky4554
+- LinkedIn: https://www.linkedin.com/in/raunak-kumar54/

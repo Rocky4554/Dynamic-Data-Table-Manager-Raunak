@@ -1,6 +1,6 @@
 import { useMemo } from 'react'
 import { useAppSelector } from '../store/hook'
-import { TableRow, Column } from '@/types'
+import { TableRow, Column } from '../types/index'
 
 export const useTableData = () => {
   const { data, columns, searchQuery, sortConfig, page, rowsPerPage } = useAppSelector(

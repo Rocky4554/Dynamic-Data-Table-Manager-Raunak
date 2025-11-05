@@ -5,7 +5,7 @@ import {
   TableRow, 
   EditingRowsState, 
   ModifiedRowsState 
-} from '@/types'
+} from '../types/index'
 
 export const useTableEdit = (data: TableRow[]) => {
   const dispatch = useAppDispatch()

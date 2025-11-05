@@ -2,7 +2,7 @@ import { useState, ChangeEvent } from 'react'
 import { useAppDispatch } from '../store/hook'
 import { addRows } from '../store/tableSlice'
 import Papa from 'papaparse'
-import { TableRow, Column } from '@/types'
+import { TableRow, Column } from '../types/index'
 
 export const useCSVOperations = () => {
   const dispatch = useAppDispatch()
