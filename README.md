@@ -1,36 +1,162 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Dynamic Data Table Manager
 
-## Getting Started
+This project is a frontend assignment built using **Next.js**, **Redux Toolkit**, and **Material UI (MUI)**.  
+It demonstrates the ability to build a production-level, dynamic user interface with advanced table features, state management, and responsive design.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Project Overview
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The **Dynamic Data Table Manager** allows users to view, search, sort, and manage tabular data with ease.  
+It supports importing and exporting CSV files, toggling between light and dark themes, and editing rows inline.  
+The application is built to simulate real-world dashboard functionality, emphasizing performance, scalability, and maintainability.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Core Features
 
-## Learn More
+### 1. Table View
+- Displays a table with default columns: **Name**, **Email**, **Age**, **Role**
+- Supports sorting on column headers (ASC/DESC toggle)
+- Global search that filters across all columns
+- Client-side pagination (10 rows per page)
 
-To learn more about Next.js, take a look at the following resources:
+### 2. Dynamic Columns
+- Manage Columns modal allows users to:
+  - Add new columns dynamically (e.g., Department, Location)
+  - Show or hide existing columns
+- Column visibility preferences are persisted in **localStorage** or **Redux Persist**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 3. Import & Export
+- **Import CSV**
+  - Upload and parse CSV files using **PapaParse**
+  - Validate file format and show error messages for invalid data
+- **Export CSV**
+  - Export the current table view as a `.csv` file
+  - Only visible columns are included in the exported file
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## Bonus Features
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Inline row editing with validation (e.g., age must be a number)
+- "Save All" and "Cancel All" buttons for batch editing
+- Row actions: **Edit**, **Delete** (with confirmation dialog)
+- Theme toggle: light/dark mode using MUI theming
+- Column reordering via drag-and-drop
+- Fully responsive UI
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## Tech Stack
+
+| Technology | Purpose |
+|-------------|----------|
+| **Next.js 14 (App Router)** | Framework for server-rendered React apps |
+| **React 18** | Component-based UI library |
+| **Redux Toolkit** | Global state management |
+| **Material UI (v5+)** | UI components and theming |
+| **TypeScript** | Static typing for safer, cleaner code |
+| **React Hook Form** | Form handling and validation |
+| **PapaParse** | CSV parsing |
+| **FileSaver.js / Blob** | CSV export |
+| **Redux Persist / localStorage** | Persist user preferences |
+
+---
+
+## Folder Structure
+project-root/
+│
+├── app/
+│   ├── page.tsx
+│   ├── layout.tsx
+│   └── api/
+│
+├── components/
+│   ├── DataTable.tsx
+│   ├── ManageColumnsModal.tsx
+│   ├── DeleteConfirmDialog.tsx
+│
+├── hooks/
+│   ├── useTableData.ts
+│   ├── useTableEdit.ts
+│   ├── useTableActions.ts
+│   └── useCSVOperations.ts
+│
+├── redux/
+│   ├── store.ts
+│   └── slices/
+│       └── tableSlice.ts
+│
+├── public/
+│   └── sample-data.csv
+│
+├── types/
+│   └── index.ts
+│
+├── package.json
+└── README.md
+text---
+
+## How to Run the Project Locally
+
+### Prerequisites
+Ensure you have the following installed:
+- **Node.js v18 or higher**
+- **npm** or **yarn**
+
+### Steps
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/dynamic-data-table-manager.git
+   cd dynamic-data-table-manager
+
+Install dependencies
+bashnpm install
+
+Run the development server
+bashnpm run dev
+
+Open the application
+Visit: http://localhost:3000
+Build for Production
+bashnpm run build
+npm run start
+
+
+
+
+## 📸 Screenshots
+
+### 1. Mian Table
+![Main table](./public/screesnShots/light.png)
+
+### 3. Dark Mode
+![Dark Mode ](./public/screesnShots/dark.png)
+
+### 3. Edit Column Moodal
+![Manage Column Modal](./public/screesnShots/edit-column.png)
+
+### 4. Client Side Pagination
+![Client Side Pagination](./public/screesnShots/pagination.png)
+
+### 5. Row Edit
+![Particulat row edit](./public/screesnShots/save-all.png)
+
+Evaluation Notes
+This project demonstrates:
+
+Component-based design with separation of concerns
+Proper use of Redux Toolkit for managing complex UI state
+Integration of MUI for theming and consistent design
+CSV import/export handling using browser APIs
+TypeScript for type safety and maintainability
+Fully responsive and accessible design
+
+
+
+Made by: Raunak Kumar
+
+GitHub: https://github.com/Rocky4554
+LinkedIn: https://www.linkedin.com/in/raunak-kumar54/
