@@ -17,7 +17,6 @@ const initialData: TableRow[] = [
   { id: 12, name: 'Julia Roberts', email: 'julia@example.com', age: 43, role: 'Manager', department: 'HR', location: 'Los Angeles' },
 ]
 
-// Default column configuration
 const defaultColumns: Column[] = [
   { id: 'name', label: 'Name', visible: true, order: 0 },
   { id: 'email', label: 'Email', visible: true, order: 1 },

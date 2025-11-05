@@ -1,17 +1,15 @@
 import { useMemo } from 'react'
 import { useAppSelector } from '../store/hook'
-import { TableRow, Column } from '../types/index'
 
 export const useTableData = () => {
   const { data, columns, searchQuery, sortConfig, page, rowsPerPage } = useAppSelector(
     state => state.table
   )
 
- 
+  // ✅ Filter only visible columns for display
   const visibleColumns = useMemo(() => {
     return columns.filter(col => col.visible).sort((a, b) => a.order - b.order)
   }, [columns])
-
 
   const filteredData = useMemo(() => {
     if (!searchQuery) return data
@@ -38,7 +36,6 @@ export const useTableData = () => {
     return sorted
   }, [filteredData, sortConfig])
 
-
   const paginatedData = useMemo(() => {
     const start = page * rowsPerPage
     return sortedData.slice(start, start + rowsPerPage)
@@ -46,6 +43,7 @@ export const useTableData = () => {
 
   return {
     data,
+    columns,         
     visibleColumns,
     filteredData,
     sortedData,
