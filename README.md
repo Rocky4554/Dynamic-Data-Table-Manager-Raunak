@@ -65,38 +65,44 @@ The application is built to simulate real-world dashboard functionality, emphasi
 ---
 
 ## Folder Structure
+
 project-root/
 │
 ├── app/
-│   ├── page.tsx
-│   ├── layout.tsx
-│   └── api/
+│ ├── layout.tsx
+│ ├── page.tsx
+│ └── api/
 │
 ├── components/
-│   ├── DataTable.tsx
-│   ├── ManageColumnsModal.tsx
-│   ├── DeleteConfirmDialog.tsx
+│ ├── DataTable.tsx
+│ ├── ManageColumnsModal.tsx
+│ └── DeleteConfirmDialog.tsx
 │
 ├── hooks/
-│   ├── useTableData.ts
-│   ├── useTableEdit.ts
-│   ├── useTableActions.ts
-│   └── useCSVOperations.ts
+│ ├── useTableData.ts
+│ ├── useTableEdit.ts
+│ ├── useTableActions.ts
+│ └── useCSVOperations.ts
 │
 ├── redux/
-│   ├── store.ts
-│   └── slices/
-│       └── tableSlice.ts
-│
-├── public/
-│   └── sample-data.csv
+│ ├── store.ts
+│ └── slices/
+│ └── tableSlice.ts
 │
 ├── types/
-│   └── index.ts
+│ └── index.ts
+│
+├── public/
+│ ├── sample-data.csv
+│ └── screesnShots/
+│ ├── light.png
+│ ├── dark.png
+│ ├── edit-column.png
+│ ├── pagination.png
+│ └── save-all.png
 │
 ├── package.json
 └── README.md
-text---
 
 ## How to Run the Project Locally
 
