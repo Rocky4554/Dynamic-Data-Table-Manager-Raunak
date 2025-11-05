@@ -104,6 +104,11 @@ project-root/
 ├── package.json
 └── README.md
 
+yaml
+Copy code
+
+---
+
 ## How to Run the Project Locally
 
 ### Prerequisites
@@ -117,22 +122,24 @@ Ensure you have the following installed:
    ```bash
    git clone https://github.com/yourusername/dynamic-data-table-manager.git
    cd dynamic-data-table-manager
-
 Install dependencies
-bashnpm install
 
+bash
+Copy code
+npm install
 Run the development server
-bashnpm run dev
 
+bash
+Copy code
+npm run dev
 Open the application
 Visit: http://localhost:3000
+
 Build for Production
-bashnpm run build
+bash
+Copy code
+npm run build
 npm run start
-
-
-
-
 ## 📸 Screenshots
 
 ### 1. Mian Table
@@ -154,15 +161,18 @@ Evaluation Notes
 This project demonstrates:
 
 Component-based design with separation of concerns
+
 Proper use of Redux Toolkit for managing complex UI state
+
 Integration of MUI for theming and consistent design
+
 CSV import/export handling using browser APIs
+
 TypeScript for type safety and maintainability
+
 Fully responsive and accessible design
 
-
-
-Made by: Raunak Kumar
-
+Made by
+Raunak Kumar
 GitHub: https://github.com/Rocky4554
 LinkedIn: https://www.linkedin.com/in/raunak-kumar54/
